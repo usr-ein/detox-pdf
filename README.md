@@ -5,6 +5,31 @@ Optionaly, you can output a PDF stripped of all active objects, trackers, auto-l
 In PDF export, it will preserve OCR/text, as well as chapters.
 
 The processed PDF files will be renamed from .pdf to .pdf.unsafe to prevent you from opening them by mistake (happens to the best of us).
+
+
+## Install
+```sh
+git clone https://github.com/usr-ein/detox-pdf
+chmod +x detox-pdf/detox-pdf.sh
+```
+
+## Usage
+
+Converts all the PDFs inside this folder to folders containing PNGs of each page. Explores the directory recursively.
+```
+./detox-pdf/detox-pdf.sh path/to/folderWithPdfs
+```
+
+Converts the specified files to folders of PNGs.
+```
+./detox-pdf/detox-pdf.sh my_file_1.pdf my_file_2.pdf
+```
+
+Converts the specified PDF file to another PDF file that's a bit more safe.
+```
+./detox-pdf/detox-pdf.sh --pdf my_file_1.pdf
+```
+
 ## Sources
 
  - Based off [Linux Sanitize PDF by C.D. and QuickRecon of r/scuba](https://github.com/scuba-tech/Linux-Sanitize-PDF)
